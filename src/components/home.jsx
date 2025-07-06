@@ -15,7 +15,8 @@ const Home = () => {
     ReactGA.pageview(window.location.pathname + window.location.search);
   }, []);
   return (
-    <>
+    <div style={{backgroundColor: 'var(--bg-color)',
+    color: 'var(--text-color)'}}>
       <header style={{ textAlign: 'center' }}>
         <h1>Open Source Devs</h1>
         <h2> Software Developers Making a Difference</h2>
@@ -33,7 +34,7 @@ const Home = () => {
           ))}
         </Grid>
       </Box>
-    </>
+    </div>
   );
 };
 

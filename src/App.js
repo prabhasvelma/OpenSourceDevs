@@ -12,6 +12,7 @@ const App = () => {
   }, []);
   return (
     <>
+      
       <CssBaseline />
       <div
         style={{ display: "flex", minHeight: "100vh", flexDirection: "column" }}

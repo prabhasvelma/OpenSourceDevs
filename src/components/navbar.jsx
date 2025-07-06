@@ -5,9 +5,11 @@ import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import { Link } from "react-router-dom";
 import SearchBar from "./searchbar";
+import ThemeToggle from "./ThemeToggle";
 
 const navLinkStyle = {
-  color: "white",
+  backgroundColor: 'var(--bg-color)',
+  color: 'var(--text-color)',
   textDecoration: "none",
   display: "flex",
   flexGrow: "1",
@@ -37,7 +39,7 @@ export default function Navbar() {
   return (
     <Box>
       {/*!!WARN: Best practice would be to use a *theme* color, not hardcoded as below */}
-      <AppBar position="static" color="primary" sx={{ bgcolor: "#000000" }}>
+      <AppBar position="static" color="primary" sx={{ backgroundColor: 'var(--bg-color)',color: 'var(--text-color)', }}>
         <Toolbar style={menuBarFlex}>
           <Typography variant="h6" component="div" style={innerItem}>
             <Link to="/" style={navLinkStyle}>
@@ -54,6 +56,7 @@ export default function Navbar() {
               About
             </Link>
           </Button>
+          <ThemeToggle />
         </Toolbar>
       </AppBar>
     </Box>

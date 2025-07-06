@@ -20,7 +20,7 @@ const About = () => {
     ReactGA.pageview(window.location.pathname + window.location.search);
   }, []);
   return (
-    <>
+    <div style={{backgroundColor: 'var(--bg-color)',color: 'var(--text-color)'}}>
       <Container component='main' sx={{ mt: 8, mb: 2 }} maxWidth='sm'>
         <Typography variant='h1' component='h1'>
           Open Source Devs
@@ -130,7 +130,7 @@ const About = () => {
           </p>
         </Typography>
       </Container>
-    </>
+    </div>
   );
 };
 
