@@ -21,7 +21,12 @@ export default function DevCard({ profile }) {
   const location = useLocation();
 
   return (
-    <Card sx={{ maxWidth: 345, textAlign: "center", marginBottom: "4px" }}>
+    <Card sx={{ maxWidth: 345, textAlign: "center", marginBottom: "4px" ,
+      '&:hover': {
+      transform: 'scale(1.05)',
+      boxShadow: '0 4px 20px rgba(0, 0, 0, 0.2)',
+      cursor: 'pointer',
+    }}}>
       <Link
         to={`users/${profile.githubUsername}`}
         style={location.pathname === "/" ? enabledLink : disabledLink}
