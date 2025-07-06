@@ -8,6 +8,13 @@ import Typography from "@mui/material/Typography";
 import { GitHub, LinkedIn, Language } from "@mui/icons-material";
 import PropTypes from "prop-types";
 import IconButton from "@mui/material/IconButton";
+/**
+ * Renders a developer profile card with hover animation.
+ *
+ * @param {Object} props
+ * @returns {JSX.Element}
+ */
+
 
 const disabledLink = {
   pointerEvents: "none",
