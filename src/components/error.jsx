@@ -11,7 +11,7 @@ import {
 
 const Error = () => {
   return (
-    <div style={{backgroundColor: 'var(--bg-color)',color: 'var(--text-color)'}}>
+    <>
       <Backdrop open={true}>
         <Card sx={{ maxWidth: 500, minHeight: 200 }}>
           <CardMedia
@@ -38,7 +38,7 @@ const Error = () => {
           </CardActions>
         </Card>
       </Backdrop>
-    </div>
+    </>
   );
 };
 

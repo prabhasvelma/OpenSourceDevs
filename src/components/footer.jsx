@@ -5,7 +5,7 @@ import Divider from "@mui/material/Divider";
 
 function Copyright() {
   return (
-    <div style={{backgroundColor: 'var(--bg-color)',color: 'var(--text-color)'}}>
+    <>
       <Divider sx={{ margin: "10px 0" }} />
 
       <Typography variant="body2" color='var(--text-color)'>
@@ -19,15 +19,16 @@ function Copyright() {
         {new Date().getFullYear()}
         {"."}
       </Typography>
-    </div>
+    </>   
   );
 }
 
 export default function Footer() {
   return (
-    <div style={{backgroundColor: 'var(--bg-color)',color: 'var(--text-color)'}}>
+    
       <Box
-        sx={{     
+        sx={{
+        backgroundColor: 'var(--bg-color)',color: 'var(--text-color)',     
         p: 6,
         display: "flex",
         flexDirection: "column",
@@ -55,10 +56,8 @@ export default function Footer() {
           >
             here
           </Link>
-          .
         </Typography>
         <Copyright />
       </Box>
-    </div>
   );
 }

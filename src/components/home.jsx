@@ -15,13 +15,12 @@ const Home = () => {
     ReactGA.pageview(window.location.pathname + window.location.search);
   }, []);
   return (
-    <div style={{backgroundColor: 'var(--bg-color)',
-    color: 'var(--text-color)'}}>
+    <>
       <header style={{ textAlign: 'center' }}>
         <h1>Open Source Devs</h1>
         <h2> Software Developers Making a Difference</h2>
       </header>
-      <Box sx={{ flexGrow: 1, margin: '3em' }}>
+      <Box sx={{ flexGrow: 1, margin: '3em',backgroundColor: 'var(--bg-color)',color: 'var(--text-color)'}}>
         <Grid
           container
           spacing={{ xs: 2, md: 3 }}
@@ -34,7 +33,7 @@ const Home = () => {
           ))}
         </Grid>
       </Box>
-    </div>
+    </>
   );
 };
 

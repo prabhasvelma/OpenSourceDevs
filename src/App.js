@@ -11,17 +11,13 @@ const App = () => {
     ReactGA.initialize(trackingId);
   }, []);
   return (
-    <>
-      
-      <CssBaseline />
-      <div
-        style={{ display: "flex", minHeight: "100vh", flexDirection: "column" }}
-      >
+    <div id="root">
+      <div className="main-content">
         <Navbar />
         {routes}
-        <Footer />
       </div>
-    </>
+      <Footer />
+    </div>
   );
 };
 

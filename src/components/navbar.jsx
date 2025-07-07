@@ -8,13 +8,12 @@ import SearchBar from "./searchbar";
 import ThemeToggle from "./ThemeToggle";
 
 const navLinkStyle = {
-  backgroundColor: 'var(--bg-color)',
-  color: 'var(--text-color)',
   textDecoration: "none",
   display: "flex",
   flexGrow: "1",
   width: "8rem",
   overflow: "hidden",
+  color: 'var(--text-color)',
 };
 
 const menuBarFlex = {
@@ -32,30 +31,35 @@ const innerItem = {
   lineHeight: "30px",
   margin: "0 0 0 10px",
   textAlign: "center",
-  radius: "10px",
 };
 
 export default function Navbar() {
   return (
-    <Box>
-      {/*!!WARN: Best practice would be to use a *theme* color, not hardcoded as below */}
-      <AppBar position="static" color="primary" sx={{ backgroundColor: 'var(--bg-color)',color: 'var(--text-color)', }}>
-        <Toolbar style={menuBarFlex}>
-          <Typography variant="h6" component="div" style={innerItem}>
+    <Box sx={{ backgroundColor: 'var(--bg-color)', color: 'var(--text-color)' }}>
+      <AppBar
+        position="static"
+        elevation={0} // remove shadow if desired
+        sx={{
+          backgroundColor: 'var(--bg-color)',
+          color: 'var(--text-color)',
+        }}
+      >
+        <Toolbar sx={menuBarFlex}>
+          <Typography variant="h6" component="div" sx={innerItem}>
             <Link to="/" style={navLinkStyle}>
               Open Source Devs
             </Link>
           </Typography>
 
-          <Box style={innerItem}>
+          <Box sx={innerItem}>
             <SearchBar />
           </Box>
 
-          <Button color="inherit" style={innerItem}>
+          <Box sx={innerItem}>
             <Link to="/about" style={navLinkStyle}>
               About
             </Link>
-          </Button>
+          </Box>
           <ThemeToggle />
         </Toolbar>
       </AppBar>
