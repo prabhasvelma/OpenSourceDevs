@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import ReactGA from "react-ga";
-import CssBaseline from "@mui/material/CssBaseline";
 import Footer from "./components/footer";
 import Navbar from "./components/navbar";
 import routes from "./routes";
